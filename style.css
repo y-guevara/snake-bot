@@ -1,0 +1,50 @@
+:root{--verde:#4ade80;--ouro:#fbbf24;--fundo:#0d1812;--card:#13241b;--borda:#2a4a38}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+html,body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none}
+body{
+  background:radial-gradient(circle at 50% -20%,#21402f,var(--fundo) 70%);
+  color:#fff;font-family:Arial,Helvetica,sans-serif;touch-action:none
+}
+.app{
+  height:100dvh;max-width:520px;margin:0 auto;display:flex;flex-direction:column;
+  gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom))
+}
+.topo{display:flex;align-items:center;gap:8px}
+.titulo{font-size:12px;font-weight:bold;letter-spacing:3px;color:var(--verde);flex:1;text-align:left}
+.pill{
+  min-width:74px;padding:6px 10px;background:var(--card);border:1px solid var(--borda);
+  border-radius:11px;text-align:center
+}
+.pill span{display:block;font-size:9px;letter-spacing:1px;color:#8fb5a0}
+.pill b{font-size:18px;color:var(--verde)}
+.pill.rec b{color:var(--ouro)}
+.palco{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+canvas{
+  display:block;border:2px solid var(--borda);border-radius:14px;background:#0f1d15;
+  box-shadow:0 8px 30px #0008;touch-action:none
+}
+.cobertura{
+  position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;padding:14px;background:#0a120dd9;border-radius:14px;text-align:center
+}
+.cobertura h2{margin:0;font-size:22px}
+.cobertura p{margin:0;font-size:13px;color:#b9d3c4;line-height:1.5}
+.niveis{display:flex;gap:6px}
+.nv{
+  padding:9px 12px;border-radius:10px;border:1px solid var(--borda);background:var(--card);
+  color:#cfe6d8;font-size:12px;font-weight:bold;cursor:pointer
+}
+.nv.on{background:var(--verde);border-color:#86efac;color:#052e16}
+.btn{
+  padding:12px 28px;border:0;border-radius:11px;background:var(--verde);color:#052e16;
+  font-weight:bold;font-size:15px;cursor:pointer
+}
+.btn:active{transform:scale(.97)}
+.oculto{display:none!important}
+.dpad{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.dpad button{
+  height:44px;border:1px solid var(--borda);border-radius:12px;background:var(--card);
+  display:flex;align-items:center;justify-content:center;cursor:pointer
+}
+.dpad button:active{background:#25483a}
+.dpad svg{width:20px;height:20px;fill:var(--verde)}

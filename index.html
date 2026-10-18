@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0d1812">
+<title>Snake | Takeshi Bot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <div class="topo">
+    <div class="titulo">SNAKE</div>
+    <div class="pill"><span>PONTOS</span><b id="pontos">0</b></div>
+    <div class="pill rec"><span>RECORDE</span><b id="recorde">0</b></div>
+  </div>
+
+  <div class="palco" id="palco">
+    <canvas id="tela"></canvas>
+    <div class="cobertura" id="cobertura">
+      <h2 id="ovTitulo">Snake</h2>
+      <p id="ovTexto">Coma a comida sem bater em você mesmo.<br>Deslize na tela ou use os botões.</p>
+      <div class="niveis" id="niveis">
+        <button class="nv on" data-n="facil">Fácil</button>
+        <button class="nv" data-n="medio">Médio</button>
+        <button class="nv" data-n="dificil">Difícil</button>
+      </div>
+      <button class="btn" id="btnJogar">Jogar</button>
+    </div>
+  </div>
+
+  <div class="dpad">
+    <button id="bEsq" aria-label="Esquerda"><svg viewBox="0 0 24 24"><path d="M15 4l-9 8 9 8z"/></svg></button>
+    <button id="bCima" aria-label="Cima"><svg viewBox="0 0 24 24"><path d="M4 15l8-9 8 9z"/></svg></button>
+    <button id="bBaixo" aria-label="Baixo"><svg viewBox="0 0 24 24"><path d="M4 9l8 9 8-9z"/></svg></button>
+    <button id="bDir" aria-label="Direita"><svg viewBox="0 0 24 24"><path d="M9 4l9 8-9 8z"/></svg></button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
